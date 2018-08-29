@@ -1,5 +1,5 @@
 <template>
-  <v-flex xs12>
+  <section>
     <v-layout row>
       <v-flex xs10 offset-xs1>
         <h1 text-xs-center class="display-2">Daniel Strolle</h1>
@@ -29,7 +29,7 @@
         </v-card>
       </v-flex>
     </v-layout>
-  </v-flex>
+  </section>
 </template>
 
 <script>
