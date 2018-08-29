@@ -1,17 +1,13 @@
 <template>
   <v-app>
-    <v-toolbar
-      app
-      row
-    >
-      <v-toolbar-items>
-        <v-btn flat>Work</v-btn>
-        <v-btn flat>Projects</v-btn>
-        <v-btn flat>Personal</v-btn>
-      </v-toolbar-items>
-    </v-toolbar>
+    <mq-layout mq="desktop">
+      <DesktopNav></DesktopNav>
+    </mq-layout>
+    <mq-layout mq="mobile">
+      <MobileNav></MobileNav>
+    </mq-layout>
     <v-content>
-      <HelloWorld/>
+      <Home/>
     </v-content>
     <v-footer app absolute>
       <span>&copy; 2017</span>
@@ -24,18 +20,31 @@
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld'
+  import Home from './components/Home'
+  import DesktopNav from './components/DesktopNav.vue'
+  import MobileNav from './components/MobileNav.vue'
+  import Vue from 'vue'
+  import VueMq from 'vue-mq'
 
-export default {
-  data () {
-    return {
-      fixed: false,
-      title: 'Daniel Strolle'
+  Vue.use(VueMq, {
+    breakpoints: {
+      mobile: 450,
+      desktop: Infinity
     }
-  },
-  name: 'App',
-  components: {
-    HelloWorld
+  })
+
+  export default {
+    data () {
+      return {
+        fixed: false,
+        title: 'Daniel Strolle'
+      }
+    },
+    name: 'App',
+    components: {
+      Home,
+      DesktopNav,
+      MobileNav
+    }
   }
-}
 </script>
