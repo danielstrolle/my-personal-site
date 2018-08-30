@@ -5,6 +5,7 @@
       <Bio></Bio>
       <Projects></Projects>
       <Work></Work>
+      <Personal></Personal>
     </v-container>
   </v-flex>
 </template>
@@ -14,8 +15,9 @@
   import Bio from './Bio.vue'
   import Work from './Work.vue'
   import Projects from './Projects.vue'
+  import Personal from './Personal.vue'
 
   export default {
-    components: {Parallax, Bio, Work, Projects}
+    components: {Parallax, Bio, Work, Projects, Personal}
   }
 </script>
