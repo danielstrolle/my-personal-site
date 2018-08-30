@@ -8,7 +8,7 @@
           flat
           slot="activator"
         >
-          <v-icon>child_care</v-icon>
+          <v-icon>menu</v-icon>
         </v-btn>
         <v-list>
           <v-list-tile
