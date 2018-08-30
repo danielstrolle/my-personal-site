@@ -13,8 +13,17 @@
     </v-layout>
     <v-layout row class="mt-3">
       <v-flex xs12>
-        What draws me to working as a Software Developer is being able to apply ideas and technologies in both theory and practice. Becoming a programmer has allowed me to leverage code to solve complex and interesting challenges. A good engineer is humble, I know that I can always learn more, but I am also supremely confident in my abilities to lend value immediately.
+        Aside from Software Development, there are a few things in life that I enjoy, and here's a look into that.
       </v-flex>
     </v-layout>
+    <PersonalActivity></PersonalActivity>
   </section>
 </template>
+
+<script>
+  import PersonalActivity from './PersonalActivity.vue'
+
+  export default {
+    components: {PersonalActivity}
+  }
+</script>
