@@ -1,5 +1,5 @@
 <template>
-  <section>
+  <section class="mt-3">
     <a id="projects"></a>
     <v-layout row class="text-xs-center mt-3">
       <v-flex xs10 offset-xs1>
@@ -21,10 +21,6 @@
           <v-flex xs12 v-if="proj.img">
             <v-card-text class="text=xs-center subheading">Desktop View</v-card-text>
             <v-card-media :src=proj.img height="300"></v-card-media>
-          </v-flex>
-          <v-flex xs12 v-if="proj.img2">
-            <v-card-text class="text=xs-center subheading">Mobile View</v-card-text>
-            <v-card-media :src=proj.img2 height="400"></v-card-media>
           </v-flex>
           <v-card-text>{{proj.desc}}</v-card-text>
           <v-flex xs10 offset-xs1>
@@ -91,7 +87,6 @@
             title: 'Spill.ai',
             desc: 'Responsible for developing a responsive, mobile-first UI using Vue.JS. Designed, implemented, and tested components based on use-case and cost analysis. The solution contained auto-complete functionality, request routing, date and search filtration, and paginating lazy-loaded results. Participated in design meetings to assist app business and technical requirements and weekly stand-ups for team progress.',
             img: '/static/img/projects/spill.ai-ss-desktop.png',
-            img2: '/static/img/projects/spill.ai-ss-mobile.png',
             tech: ['C#', '.NET Core', 'Elasticsearch', 'MSTest', 'npm', 'Vue.js', 'Vuetify', 'Vue MQ', 'Javascript', 'jQuery', 'CSS']
           },
           {

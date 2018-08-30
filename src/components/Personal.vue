@@ -1,5 +1,5 @@
 <template>
-  <section>
+  <section class="mt-3">
     <a id="personal"></a>
     <v-layout row class="text-xs-center mt-3">
       <v-flex xs10 offset-xs1>
