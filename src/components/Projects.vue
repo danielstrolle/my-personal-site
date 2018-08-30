@@ -1,8 +1,9 @@
 <template>
   <section>
+    <a id="projects"></a>
     <v-layout row class="text-xs-center mt-3">
       <v-flex xs10 offset-xs1>
-        <h1 text-xs-center class="display-1">Projects</h1>
+          <h1 text-xs-center class="display-1">Projects</h1>
       </v-flex>
     </v-layout>
     <v-layout row class="mt-3">

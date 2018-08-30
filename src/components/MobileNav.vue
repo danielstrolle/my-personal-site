@@ -15,7 +15,9 @@
             v-for="(item, index) in items"
             :key="index"
             @click="">
-            <v-list-tile-title>{{item.title}}</v-list-tile-title>
+            <a :href=item.link style="color: black; text-decoration: none">
+              <v-list-tile-title>{{item.title}}</v-list-tile-title>
+            </a>
           </v-list-tile>
         </v-list>
       </v-menu>
@@ -25,12 +27,12 @@
 
 <script>
   export default {
-    data () {
+    data() {
       return {
         items: [
-          {title: 'Work'},
-          {title: 'Projects'},
-          {title: 'Personal'}
+          {title: 'Work', link: '#work'},
+          {title: 'Projects', link: '#projects'},
+          {title: 'About Me', link: '#personal'}
         ]
       }
     }

@@ -1,5 +1,6 @@
 <template>
   <section>
+    <a id="work"></a>
     <v-layout row class="text-xs-center mt-3">
       <v-flex xs10 offset-xs1>
         <h1 text-xs-center class="display-1">Work</h1>
