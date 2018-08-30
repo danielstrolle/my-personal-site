@@ -5,6 +5,11 @@
         <h1 text-xs-center class="display-1">Projects</h1>
       </v-flex>
     </v-layout>
+    <v-layout row class="mt-3">
+      <v-flex xs12>
+        <hr>
+      </v-flex>
+    </v-layout>
     <v-layout row v-for="(proj, index) in projects" :key="index">
       <v-flex xs12>
         <v-card class="mt-3">
