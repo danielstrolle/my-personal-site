@@ -12,8 +12,7 @@
         <br>
         <hr>
         <ul class="mt-3">
-          <li>OCA Java SE 8 Programmer
-          </li>
+          <li>OCA Java SE 8 Programmer</li>
           <li>Codeup - Certificate of Completion</li>
         </ul>
       </v-flex>
@@ -23,7 +22,7 @@
         <v-card>
           <v-container fluid grid-list-lg>
             <v-card-text>
-              As a software developer, I love that I can implement and leverage new ideas and technologies to solve complex and interesting challenges. A good engineer is humble, I know that I can always learn more, but I am also supremely confident in my abilities to lend value immediately.
+              My experiences thus far have allowed me to continue to pickup new pieces, understand overarching trends and themes, and put the puzzle together. The right opportunity is always right around the corner!
             </v-card-text>
           </v-container>
         </v-card>
