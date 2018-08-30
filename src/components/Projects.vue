@@ -9,6 +9,9 @@
       <v-flex xs12>
         <v-card class="mt-3">
           <v-card-text class="title text-xs-center">{{proj.title}}</v-card-text>
+          <v-flex xs10 offset-xs1>
+            <hr>
+          </v-flex>
           <v-flex xs12 v-if="proj.img">
             <v-card-text class="text=xs-center subheading">Desktop View</v-card-text>
             <v-card-media :src=proj.img height="300"></v-card-media>
@@ -18,7 +21,9 @@
             <v-card-media :src=proj.img2 height="400"></v-card-media>
           </v-flex>
           <v-card-text>{{proj.desc}}</v-card-text>
-          <hr>
+          <v-flex xs10 offset-xs1>
+            <hr>
+          </v-flex>
           <v-card-text v-html="'<strong>Languages/Frameworks used: </strong>' + techArrayToString(proj.tech)">
           </v-card-text>
           <v-flex text-xs-center v-if="proj.sourceCode">
