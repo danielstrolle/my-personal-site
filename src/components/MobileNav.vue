@@ -30,9 +30,9 @@
     data() {
       return {
         items: [
-          {title: 'Work', link: '#work'},
           {title: 'Projects', link: '#projects'},
-          {title: 'About Me', link: '#personal'}
+          {title: 'Work', link: '#work'},
+          {title: 'Personal', link: '#personal'}
         ]
       }
     }
