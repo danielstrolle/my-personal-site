@@ -9,12 +9,35 @@
     <v-content>
       <Home/>
     </v-content>
-    <v-footer app absolute>
-      <span>&copy; 2017</span>
-      <span>Contact Me</span>
-      <span>email</span>
-      <span>linkedin</span>
-      <span>github</span>
+    <v-footer
+      height="auto"
+      app
+      absolute
+    >
+      <v-layout
+        justify-center
+        row
+        wrap
+      >
+        <v-btn
+          v-for="(l, index) in links"
+          :key="index"
+          flat
+          round
+        >
+          <a :href="l.link" style="text-decoration: none; color: black;">
+            {{ l.name }}
+          </a>
+        </v-btn>
+        <v-flex
+          lighten-2
+          py-3
+          text-xs-center
+          xs12
+        >
+          &copy;2018 — <strong>Daniel Strolle</strong>
+        </v-flex>
+      </v-layout>
     </v-footer>
   </v-app>
 </template>
@@ -34,10 +57,15 @@
   })
 
   export default {
-    data () {
+    data() {
       return {
         fixed: false,
-        title: 'Daniel Strolle'
+        title: 'Daniel Strolle',
+        links: [
+          {name: 'Github', link: 'https://github.com/danielstrolle'},
+          {name: 'LinkedIn', link: 'https://www.linkedin.com/in/danielstrolle/'},
+          {name: 'Email Me', link: 'mailto:danielstrolle@gmail.com'}
+        ]
       }
     },
     name: 'App',
