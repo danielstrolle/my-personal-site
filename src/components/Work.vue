@@ -7,12 +7,12 @@
       </v-flex>
     </v-layout>
     <v-layout row class="mt-3">
-      <v-flex xs12>
+      <v-flex xs12 sm4 offset-sm4>
         <hr>
       </v-flex>
     </v-layout>
-    <v-layout row class="mt-3" v-for="(job, index) in jobs" :key="index">
-      <v-flex xs12>
+    <v-layout row class="mt-5" v-for="(job, index) in jobs" :key="index">
+      <v-flex xs12 sm6 offset-sm3>
         <v-card>
           <v-layout row>
               <v-card-text class="title">{{job.company}}</v-card-text>

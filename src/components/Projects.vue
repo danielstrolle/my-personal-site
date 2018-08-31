@@ -38,7 +38,7 @@
         </v-card>
       </v-flex>
     </v-layout>
-    <v-layout row class="text-xs-center mt-3">
+    <v-layout row class="text-xs-center mt-5">
       <v-flex xs10 offset-xs1 sm4 offset-sm4>
         <h1 text-xs-center class="display-1">More Projects</h1>
       </v-flex>
@@ -48,7 +48,7 @@
         <hr>
       </v-flex>
     </v-layout>
-    <v-flex xs12 sm8 offset-sm2>
+    <v-flex xs12 sm8 offset-sm2 mt-5>
       <v-carousel class="mt-3"
                   hide-delimiters
                   style="height: 100%;"
