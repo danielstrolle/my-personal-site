@@ -3,20 +3,14 @@
     app
   >
     <v-toolbar-items>
-      <v-btn flat>
-        <a href="#work" style="text-decoration: none; color: black">
-          Work
-        </a>
+      <v-btn flat v-scroll-to="'#work'">
+        Work
       </v-btn>
-      <v-btn flat>
-        <a href="#projects" style="text-decoration: none; color: black">
-          Projects
-        </a>
+      <v-btn flat v-scroll-to="'#projects'">
+        Projects
       </v-btn>
-      <v-btn flat>
-        <a href="#personal" style="text-decoration: none; color: black">
-          About Me
-        </a>
+      <v-btn flat v-scroll-to="'#personal'">
+        Personal
       </v-btn>
     </v-toolbar-items>
   </v-toolbar>

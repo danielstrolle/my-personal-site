@@ -15,9 +15,7 @@
             v-for="(item, index) in items"
             :key="index"
             @click="">
-            <a :href=item.link style="color: black; text-decoration: none">
-              <v-list-tile-title>{{item.title}}</v-list-tile-title>
-            </a>
+            <v-list-tile-title v-scroll-to="item.link">{{item.title}}</v-list-tile-title>
           </v-list-tile>
         </v-list>
       </v-menu>
