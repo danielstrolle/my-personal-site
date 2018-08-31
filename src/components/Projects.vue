@@ -7,27 +7,31 @@
       </v-flex>
     </v-layout>
     <v-layout row class="mt-3">
-      <v-flex xs12>
+      <v-flex xs12 sm4 offset-sm4>
         <hr>
       </v-flex>
     </v-layout>
     <v-layout row v-for="(proj, index) in projects" :key="index">
-      <v-flex xs12>
-        <v-card class="mt-3">
+      <v-flex xs12 sm6 offset-sm3>
+        <v-card class="mt-5">
           <v-card-text class="title text-xs-center">{{proj.title}}</v-card-text>
-          <v-flex xs10 offset-xs1>
+          <v-flex xs10 offset-xs1 sm8 offset-sm2>
             <hr>
           </v-flex>
-          <v-flex xs12 v-if="proj.img">
+          <v-flex xs12 sm10 offset-sm1 v-if="proj.img">
             <v-card-text class="text=xs-center subheading">Desktop View</v-card-text>
             <v-card-media :src=proj.img height="300"></v-card-media>
           </v-flex>
-          <v-card-text>{{proj.desc}}</v-card-text>
-          <v-flex xs10 offset-xs1>
+          <v-flex xs12 sm8 offset-sm2>
+            <v-card-text>{{proj.desc}}</v-card-text>
+          </v-flex>
+          <v-flex xs10 offset-xs1 sm8 offset-sm2>
             <hr>
           </v-flex>
-          <v-card-text v-html="'<strong>Languages/Frameworks used: </strong>' + techArrayToString(proj.tech)">
-          </v-card-text>
+          <v-flex xs12 sm8 offset-sm2>
+            <v-card-text v-html="'<strong>Languages/Frameworks used: </strong>' + techArrayToString(proj.tech)">
+            </v-card-text>
+          </v-flex>
           <v-flex text-xs-center v-if="proj.sourceCode">
             <a :href=proj.sourceCode style="text-decoration: none;">View Source Code</a>
           </v-flex>
@@ -35,41 +39,43 @@
       </v-flex>
     </v-layout>
     <v-layout row class="text-xs-center mt-3">
-      <v-flex xs10 offset-xs1>
+      <v-flex xs10 offset-xs1 sm4 offset-sm4>
         <h1 text-xs-center class="display-1">More Projects</h1>
       </v-flex>
     </v-layout>
     <v-layout row class="mt-3">
-      <v-flex xs12>
+      <v-flex xs12 sm4 offset-sm4>
         <hr>
       </v-flex>
     </v-layout>
-    <v-carousel class="mt-3"
-      hide-delimiters
-      style="height: 100%;"
-    >
-      <v-carousel-item  v-for="(proj, index) in moreProjects" :key="index">
-        <v-card class="mt-3">
-          <v-card-text class="title text-xs-center">{{proj.title}}</v-card-text>
-          <v-flex xs10 offset-xs1>
-            <hr>
-          </v-flex>
-          <v-flex xs12 v-if="proj.img">
-            <v-card-text class="text=xs-center subheading">Desktop View</v-card-text>
-            <v-card-media :src=proj.img height="300"></v-card-media>
-          </v-flex>
-          <v-card-text>{{proj.desc}}</v-card-text>
-          <v-flex xs10 offset-xs1>
-            <hr>
-          </v-flex>
-          <v-card-text v-html="'<strong>Languages/Frameworks used: </strong>' + techArrayToString(proj.tech)">
-          </v-card-text>
-          <v-flex text-xs-center v-if="proj.sourceCode">
-            <a :href=proj.sourceCode style="text-decoration: none;">View Source Code</a>
-          </v-flex>
-        </v-card>
-      </v-carousel-item>
-    </v-carousel>
+    <v-flex xs12 sm8 offset-sm2>
+      <v-carousel class="mt-3"
+                  hide-delimiters
+                  style="height: 100%;"
+      >
+        <v-carousel-item v-for="(proj, index) in moreProjects" :key="index">
+          <v-card class="mt-3">
+            <v-card-text class="title text-xs-center">{{proj.title}}</v-card-text>
+            <v-flex xs10 offset-xs1>
+              <hr>
+            </v-flex>
+            <v-flex xs12 v-if="proj.img">
+              <v-card-text class="text=xs-center subheading">Desktop View</v-card-text>
+              <v-card-media :src=proj.img height="300"></v-card-media>
+            </v-flex>
+            <v-card-text>{{proj.desc}}</v-card-text>
+            <v-flex xs10 offset-xs1>
+              <hr>
+            </v-flex>
+            <v-card-text v-html="'<strong>Languages/Frameworks used: </strong>' + techArrayToString(proj.tech)">
+            </v-card-text>
+            <v-flex text-xs-center v-if="proj.sourceCode">
+              <a :href=proj.sourceCode style="text-decoration: none;">View Source Code</a>
+            </v-flex>
+          </v-card>
+        </v-carousel-item>
+      </v-carousel>
+    </v-flex>
   </section>
 </template>
 
