@@ -7,12 +7,12 @@
       </v-flex>
     </v-layout>
     <v-layout row class="mt-3">
-      <v-flex xs12>
+      <v-flex xs12 sm4 offset-sm4>
         <hr>
       </v-flex>
     </v-layout>
     <v-layout row class="mt-3">
-      <v-flex xs12>
+      <v-flex xs12 sm6 offset-sm3 text-xs-center>
         Aside from Software Development, there are a few things in life that I enjoy, and here's a look into that.
       </v-flex>
     </v-layout>
