@@ -11,9 +11,9 @@
         <hr>
       </v-flex>
     </v-layout>
-    <v-layout row class="mt-3">
+    <v-layout row class="mt-5">
       <v-flex xs12 sm6 offset-sm3 text-xs-center>
-        Aside from Software Development, there are a few things in life that I enjoy, and here's a look into that.
+        <h2 class="title">A look into the things in my life aside from software development.</h2>
       </v-flex>
     </v-layout>
     <PersonalActivity :activities="activities"></PersonalActivity>
