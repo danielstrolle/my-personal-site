@@ -49,6 +49,9 @@
   import Vue from 'vue'
   import VueMq from 'vue-mq'
 
+  const VueScrollTo = require('vue-scrollto')
+  Vue.use(VueScrollTo)
+
   Vue.use(VueMq, {
     breakpoints: {
       mobile: 450,
