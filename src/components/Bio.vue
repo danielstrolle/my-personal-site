@@ -45,6 +45,17 @@
           </ul>
         </v-flex>
       </v-layout>
+      <v-layout row mt-5>
+        <v-flex sm8 offset-sm2>
+          <hr>
+        </v-flex>
+      </v-layout>
+      <v-layout row mt-5>
+        <v-flex sm6 offset-sm3>
+          <p class="subheading">
+            My experiences thus far have allowed me to continue to pickup new pieces, understand overarching trends and themes, and put the puzzle together. The right opportunity is always right around the corner!</p>
+        </v-flex>
+      </v-layout>
     </mq-layout>
   </section>
 </template>
