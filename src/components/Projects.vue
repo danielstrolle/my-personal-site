@@ -20,7 +20,7 @@
           </v-flex>
           <v-flex xs12 sm10 offset-sm1 v-if="proj.img">
             <v-card-text class="text=xs-center subheading">Desktop View</v-card-text>
-            <v-card-media :src=proj.img height="300"></v-card-media>
+            <v-img :src=proj.img height="300"></v-img>
           </v-flex>
           <v-flex xs12 sm8 offset-sm2>
             <v-card-text>{{proj.desc}}</v-card-text>
@@ -49,29 +49,32 @@
       </v-flex>
     </v-layout>
     <v-flex xs12 sm8 offset-sm2 mt-5>
-      <v-carousel class="mt-3"
-                  hide-delimiters
-                  style="height: 100%;"
+      <v-carousel
+        hide-delimiters
+        light
+        style="height: 640px"
       >
         <v-carousel-item v-for="(proj, index) in moreProjects" :key="index">
-          <v-card class="mt-3">
-            <v-card-text class="title text-xs-center">{{proj.title}}</v-card-text>
-            <v-flex xs10 offset-xs1>
-              <hr>
-            </v-flex>
-            <v-flex xs12 v-if="proj.img">
-              <v-card-text class="text=xs-center subheading">Desktop View</v-card-text>
-              <v-card-media :src=proj.img height="300"></v-card-media>
-            </v-flex>
-            <v-card-text>{{proj.desc}}</v-card-text>
-            <v-flex xs10 offset-xs1>
-              <hr>
-            </v-flex>
-            <v-card-text v-html="'<strong>Languages/Frameworks used: </strong>' + techArrayToString(proj.tech)">
-            </v-card-text>
-            <v-flex text-xs-center v-if="proj.sourceCode">
-              <a :href=proj.sourceCode style="text-decoration: none;">View Source Code</a>
-            </v-flex>
+          <v-card style="height: 100%;">
+            <v-container>
+              <v-card-text class="title text-xs-center">{{proj.title}}</v-card-text>
+              <v-flex xs10 offset-xs1>
+                <hr>
+              </v-flex>
+              <v-flex xs12 v-if="proj.img">
+                <v-card-text class="text=xs-center subheading">Desktop View</v-card-text>
+                <v-img :src=proj.img height="300"></v-img>
+              </v-flex>
+              <v-card-text>{{proj.desc}}</v-card-text>
+              <v-flex xs10 offset-xs1>
+                <hr>
+              </v-flex>
+              <v-card-text v-html="'<strong>Languages/Frameworks used: </strong>' + techArrayToString(proj.tech)">
+              </v-card-text>
+              <v-flex text-xs-center v-if="proj.sourceCode">
+                <a :href=proj.sourceCode style="text-decoration: none;">View Source Code</a>
+              </v-flex>
+            </v-container>
           </v-card>
         </v-carousel-item>
       </v-carousel>
@@ -140,6 +143,9 @@
           }]
       }
     },
+//    mounted () {
+//      this.$refs.carousel.$el.height = '100%'
+//    },
     methods: {
       techArrayToString: function (array) {
         let techString = ''
